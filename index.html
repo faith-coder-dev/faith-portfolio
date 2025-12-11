@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Faith Nkirote - Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="top-btn">
+            <button id="theme-btn" class="theme-btn"><i class='bx bx-moon'></i></button>
             <a href="#contact" class="nav-btn">Contact Me</a>
-
         </div>
     </header>
     <!-- Home section -->
@@ -114,10 +115,21 @@
     <!-- Portfolio section -->
     <section id="portfolio" class="portfolio">
         <h2 class="heading">My <span>Portfolio</span></h2>
+
+        <!-- Project Filter -->
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+
         <div class="portfolio-content">
-            <div class="box">
+            <div class="box portfolio-item" data-category="frontend">
                 <div class="img-wrapper">
                     <img src="assets/ExpenseTracker2.jpg" alt="Expense Tracker">
+                    <div class="project-overlay">
+                        <button class="view-details-btn">View Details</button>
+                    </div>
                 </div>
                 <div class="text-content">
                     <h3>Expense Tracker</h3>
@@ -128,22 +140,113 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Project Details Modal -->
+                <div class="project-details" style="display:none;">
+                    <div class="details-content">
+                        <button class="close-details">&times;</button>
+                        <h3>Expense Tracker</h3>
+                        <p><strong>Description:</strong> A web application that helps users track and categorize their
+                            expenses. Built with React for a smooth user experience.</p>
+                        <p><strong>Technologies:</strong> React, JavaScript, CSS, Local Storage</p>
+                        <p><strong>Features:</strong></p>
+                        <ul>
+                            <li>Add and delete expenses</li>
+                            <li>Categorize spending by type</li>
+                            <li>Visual spending analytics</li>
+                            <li>Persistent data storage</li>
+                        </ul>
+                        <a href="https://expense-tracker-flame-sigma.vercel.app/" target="_blank" class="btn">View
+                            Live</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="box">
+            <div class="box portfolio-item" data-category="fullstack">
                 <div class="img-wrapper">
                     <img src="assets/VetConnect.jpg" alt="VetConnect">
+                    <div class="project-overlay">
+                        <button class="view-details-btn">View Details</button>
+                    </div>
                 </div>
                 <div class="text-content">
                     <h3>VetConnect</h3>
                     <p>Find trusted veterinarians, book appointments, and ensure your pet's health — all in one place.
                     </p>
                     <div class="links">
-                        <a href="https://github.com/faith-coder-dev/VetConnect.git" class="Local link" target="_blank">
+                        <a href="https://github.com/faith-coder-dev/VetConnect.git" class="Local Only" target="_blank">
                             <i class='bx bxl-github'></i>
                         </a>
                     </div>
                 </div>
+
+                <!-- Project Details Modal -->
+                <div class="project-details" style="display:none;">
+                    <div class="details-content">
+                        <button class="close-details">&times;</button>
+                        <h3>VetConnect</h3>
+                        <p><strong>Description:</strong> A comprehensive platform connecting pet owners with
+                            veterinarians. Allows users to search for vets, read reviews, and book appointments.</p>
+                        <p><strong>Technologies:</strong> React, Node.js, MongoDB, Express</p>
+                        <p><strong>Features:</strong></p>
+                        <ul>
+                            <li>Veterinarian directory with ratings</li>
+                            <li>Appointment booking system</li>
+                            <li>User reviews and testimonials</li>
+                            <li>Pet health tracking</li>
+                        </ul>
+                        <a href="https://github.com/faith-coder-dev/VetConnect.git" target="_blank" class="btn">View on
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="heading">What <span>Others Say</span></h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>"Faith's work on our project was outstanding. She delivered clean, responsive code and went above and
+                    beyond our expectations."</p>
+                <h4>Amara Kipchoge</h4>
+                <span>Project Manager, Kenya Tech Hub</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>"Excellent communication and problem-solving skills. Faith is a reliable developer who truly cares
+                    about her work quality."</p>
+                <h4>Trevor Nelson</h4>
+                <span>CEO, Nairobi Digital Solutions</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>"Working with Faith was a breeze. Her attention to detail and creative approach brought our vision to
+                    life beautifully."</p>
+                <h4>Clara Lee</h4>
+                <span>Founder, Kisumu Creative Agency</span>
             </div>
         </div>
     </section>
@@ -153,28 +256,51 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form action="#" id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" name="email" placeholder="Email Address">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
 
             <div class="input-box">
                 <input type="number" placeholder="Contact Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" placeholder="Email Subject" required>
             </div>
 
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
+            <div id="form-message" class="form-message"></div>
         </form>
     </section>
 
     <!-- Footer section -->
     <footer class="footer">
-        <div class="social">
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Email: faith@info.com</li>
+                    <li>Location: Kenya</li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
         </div>
 
         <p class="copyright">
