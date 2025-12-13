@@ -1026,6 +1026,7 @@ span {
     align-items: center;
     gap: 1.5rem;
     padding-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .footer .social {
