@@ -475,10 +475,10 @@ section {
 
 .home {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    gap: 4.5rem;
+    gap: 3.4rem;
 }
 
 .home-content {
