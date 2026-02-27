@@ -137,6 +137,20 @@ function showMessage(msg, type) {
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+function inferProjectCategory(item) {
+    const detailsText = item.querySelector('.project-details')?.textContent?.toLowerCase() || '';
+    const backendKeywords = [
+        'backend', 'python', 'flask', 'django', 'node', 'express',
+        'sql', 'sqlite', 'postgres', 'postgresql', 'mongodb',
+        'api', 'rest', 'sqlalchemy', 'jwt', 'bcrypt'
+    ];
+
+    const hasBackendTech = backendKeywords.some(keyword => detailsText.includes(keyword));
+    item.setAttribute('data-category', hasBackendTech ? 'fullstack' : 'frontend');
+}
+
+portfolioItems.forEach(inferProjectCategory);
+
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const filter = button.getAttribute('data-filter');
