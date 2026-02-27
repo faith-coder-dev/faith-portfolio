@@ -188,7 +188,7 @@ span {
 .portfolio-content .box {
     position: relative;
     background: var(--second-bg-color);
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     padding: 0;
     transition: all 0.3s ease;
@@ -216,7 +216,7 @@ span {
 .portfolio-content .box:hover {
     border-color: var(--main-color);
     box-shadow: 0 0 30px rgba(255, 0, 96, 0.2);
-    transform: translateY(-10px);
+    transform: translateY(-6px);
 }
 
 .img-wrapper {
@@ -231,7 +231,7 @@ span {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 2.5rem 2.5rem 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
     transition: transform 0.3s ease;
 }
 
@@ -251,7 +251,7 @@ span {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 2.5rem 2.5rem 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .portfolio-content .box:hover .project-overlay {
@@ -404,7 +404,7 @@ span {
 }
 
 .testimonial-card {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     padding: 2.5rem;
     border-radius: 1.5rem;
     border: 2px solid #ff006033;
@@ -741,6 +741,36 @@ span {
     transform: translateY(-6px) scale(1.02);
 }
 
+.services .box {
+    background: var(--second-bg-color);
+    border: 2px solid #ff006033;
+    box-shadow: none;
+    padding: 4.2rem 3.2rem;
+    border-radius: 1.5rem;
+}
+
+.services .box h3 {
+    font-size: 2.9rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+}
+
+.services .box p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2.2rem;
+}
+
+.footer-section {
+    transition: all 0.3s ease;
+}
+
+.footer-section:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 30px rgba(255, 0, 96, 0.2);
+    transform: translateY(-6px);
+}
+
 .about-img img {
     position: relative;
     width: 30vw;
@@ -781,6 +811,12 @@ span {
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
     color: var(--main-color);
+}
+
+.skill-category p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--text-color);
 }
 
 .skill-item {

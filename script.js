@@ -83,7 +83,7 @@ initTheme();
 
 // Typed.js animation
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Web Designer', 'UI/UX Designer', 'Backend Developer', 'Aspiring Full Stack Engineer'],
+    strings: ['Full Stack Software Engineer', 'Full Stack Developer', 'Frontend Engineer', 'Backend Developer'],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1200,
